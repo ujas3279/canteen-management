@@ -1,5 +1,6 @@
 import 'package:canteen_management/loginpage.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_splash/animated_splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,12 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.orange,
       ),
-      home: MyHomePage(title: 'Canteen Login'),
+      home:AnimatedSplash(
+              imagePath: 'assets/images/logo.jpg',
+              home: MyHomePage(title: 'Canteen Login'),
+              duration: 4000,
+              type: AnimatedSplashType.StaticDuration,
+            ),
     );
   }
 }
